@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<title>Dashboard</title>
+</head>
+<body>
+
+<div class="page">
+
+<div class="top">
+<img src="assets/info.webp" class="logo">
+<h2>Marketing Campaign Dashboard</h2>
+</div>
+
+<div class="dash">
+
+<img src="assets/logo.webp" width="120">
+
+<div class="cards">
+<div class="stat">Budget <span id="tb">0</span></div>
+<div class="stat">Sales <span id="ts">0</span></div>
+<div class="stat">Profit <span id="tp">0</span></div>
+<div class="stat">Active <span id="ac">0</span></div>
+</div>
+
+<p id="ai"></p>
+
+<input id="name" placeholder="Campaign Name">
+
+<select id="platform">
+<option>Instagram</option>
+<option>Google</option>
+<option>Facebook</option>
+</select>
+
+<input id="budget" placeholder="Budget">
+<input id="leads" placeholder="Leads">
+<input id="sales" placeholder="Sales">
+
+<button onclick="addCampaign()">Add / Update Campaign</button>
+
+<!-- NEW: CSV Export -->
+<button class="secondary" onclick="exportCSV()">Download CSV</button>
+
+<h3>Campaign History</h3>
+<div id="list"></div>
+
+<canvas id="chart"></canvas>
+
+<button class="logout" onclick="toggleTheme()">Toggle Theme</button>
+<button class="logout" onclick="logout()">Logout</button>
+
+</div>
+</div>
+
+<!-- Toast -->
+<div id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
